@@ -1,0 +1,128 @@
+.main{
+    width: 100%;
+
+    .secTitle{
+        .title{
+            position: relative;
+            width: max-content;
+            color: black;
+            margin: 1rem 0;
+            z-index: 2;
+            &::after{
+                    position: absolute;
+                    content: "";
+                    background: salmon;
+                    height: 5px;
+                    width: 120px;
+                    right: 0;
+                    bottom: 5px;
+                    z-index: -1;
+            }
+        }
+    }
+    .secContent{
+      justify-content: center;
+      gap: 1.5rem;
+        .signleDestination{
+            height: 100%;
+            display: grid;
+            row-gap: 10px;
+            border-radius: 10px;
+            align-items: center;
+            background: aquamarine;
+            box-shadow: 0 2px 4px rgba(140, 140,141,0.549);
+            overflow: hidden;
+            // padding: 1rem;
+            &:hover{
+                background: whitesmoke;
+                box-shadow: 1 4px 4px rgba(85,85,114,0.549);
+                transition: .3s ease;
+            }
+            .imageDiv{
+                height: 180px;
+                width: 100%;
+                overflow: hidden;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    transition: .2s ease;
+                }
+                &:hover{
+                    img{
+                        transform: scale(1.1);
+
+                    }
+                }
+            }
+            .cardInfo{
+                padding: 1rem;
+                .desTitle{
+                    color: black;
+                    font-size: 1.25rem;
+
+                }
+                .continent{
+                    gap: .5rem;
+                    .icon{
+                        color: black;
+                        font-size: 18px;
+                    }
+                    .name{
+                        color: black;
+                        font-weight: 400;
+                        font-size: 14px;
+
+                    }
+                }
+                .fees{
+                    width: 100%;
+                    justify-content: space-between;
+                    padding: 1rem;
+                    margin: 1rem 0;
+                    border-top: 1.5px solid grey;
+                    border-bottom: 1.5px solid grey;
+
+                    .grade{
+                        color: black;
+                        max-width: 100px;
+                        line-height: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        small{
+                            text-align: center;
+                            background: salmon;
+                            border-radius: 1rem;
+                            color: white;
+                            padding: 1px 10px;
+                            font-size: 10px;
+                        }
+                    }
+                    .price{
+                        font-size: 2rem;
+                        color: black;
+                    }
+                }
+                .desc{
+                    font-size: 13.5px;
+                    color: black;
+                    font-weight: 500;
+                }
+                .btn{
+                    margin-top: 1rem;
+                    color: white;
+                    font-weight: 600;
+                    justify-content: space-between;
+                    gap: .5rem;
+                    .icon{
+                        align-self: center;
+                        font-size: 18px;
+                        
+                    }
+                }      
+            }
+        }
+    }
+}
